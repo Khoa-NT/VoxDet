@@ -3,3 +3,5 @@ mmpycocotools
 numpy
 six
 terminaltables
+future 
+tensorboard
