@@ -35,18 +35,32 @@ This repo is built based on [mmdetection](https://github.com/open-mmlab/mmdetect
 
 For evaluation, you also need [bop_toolkit](https://mega.nz/file/BAEj3TgS#yzwX2AHUg9CtCsmDV17rxVkmFhw4mh34y6gvQ3FDS4E)
 
+Folder structure:
+```
+├── bop_toolkit
+└── VoxDet
+```
+
 You can use the following commands to create conda env with related dependencies.
 ```shell
+# clone the VoxDet repository
+
+# Create conda env
 conda create -n voxdet python=3.7 -y
 conda activate voxdet
-conda install pytorch=1.7.0 torchvision cudatoolkit=11.0 -c pytorch -y
-pip install mmcv-full==1.2.7
+pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install mmcv-full==1.7.1 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
+
+# Install VoxDet
+cd VoxDet
 pip install -r requirements.txt
 pip install -v -e . 
 
+# Install bop_toolkit
 cd ..
 cd bop_toolkit
 pip install -e .
+pip install pypng pytz npy-append-array
 ```
 
 

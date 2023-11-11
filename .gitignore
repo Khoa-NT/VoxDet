@@ -6,3 +6,6 @@ outputs/*
 __pycache__/
 *.pyc
 *.zip
+
+._.DS_Store
+.DS_Store
